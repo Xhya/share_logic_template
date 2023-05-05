@@ -1,0 +1,30 @@
+{
+  "name": "shared-logic",
+  "version": "1.0.0",
+  "description": "the logic shared by platforms (web/mobile)",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "dev": "",
+    "localpublish": "npm run prepare && npm run build && npm pack --pack-destination ./versions",
+    "prepublish": "npm run prepare && npm run build && npm run bump && npm pack --pack-destination ./versions",
+    "prepare": "npm run test",
+    "build": "tsc index.ts --outDir lib",
+    "bump": "npm version patch"
+  },
+  "author": "Alexia Souvane",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "reselect": "^4.1.8"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-typescript": "^7.21.5",
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.16.3",
+    "jest": "^29.5.0",
+    "typescript": "^5.0.4"
+  }
+}
