@@ -5,6 +5,7 @@
         "dom.iterable",
       ],
       "allowJs": true,
+      "declaration": true,
       "skipLibCheck": true,
       "strict": false,
       "forceConsistentCasingInFileNames": true,
@@ -15,7 +16,9 @@
       "resolveJsonModule": true,
       "module": "commonjs",
       "isolatedModules": true,
-      "jsx": "preserve"
+      "jsx": "preserve",
+      "outDir": "lib",
+      "declarationMap": true
     },
     "include": [
       "**/*.ts",

@@ -7,10 +7,10 @@
   "scripts": {
     "test": "jest",
     "dev": "",
-    "localpublish": "npm run prepare && npm run build && npm pack --pack-destination ./versions",
+    "localpublish": "npm run prepare && npm run build && cd lib && npm pack --pack-destination ../versions",
     "prepublish": "npm run prepare && npm run build && npm run bump && npm pack --pack-destination ./versions",
     "prepare": "npm run test",
-    "build": "tsc index.ts --outDir lib",
+    "build": "tsc index.ts --declaration --outDir lib",
     "bump": "npm version patch"
   },
   "author": "Alexia Souvane",
